@@ -1,0 +1,2 @@
+c:\users\bigdaddyduergar\documents\visual studio 2015\Projects\META\META\bin\Debug\META.exe.config
+C:\Users\BigDaddyDuergar\Dropbox\Code\META\META\bin\Debug\META.exe.config

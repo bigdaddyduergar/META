@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6CCC60F1-E114-46AC-BFE7-0E0BFAF1468F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>META.DataAccess</RootNamespace>
+    <AssemblyName>META.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExtCore.Data.EntityFramework.Sqlite, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtCore.Data.EntityFramework.Sqlite.3.0.0\lib\netcoreapp2.0\ExtCore.Data.EntityFramework.Sqlite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\..\Dropbox\Code\WoDPowerReferences\WoDPowerReferences\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Models\Attribute.cs" />
+    <Compile Include="Models\Background.cs" />
+    <Compile Include="Models\BackgroundRef.cs" />
+    <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\ClanRef.cs" />
+    <Compile Include="Models\Discipline.cs" />
+    <Compile Include="Models\DisciplineRef.cs" />
+    <Compile Include="Models\Flaw.cs" />
+    <Compile Include="Models\FlawRef.cs" />
+    <Compile Include="Models\Mapping\AttributeMap.cs" />
+    <Compile Include="Models\Mapping\BackgroundMap.cs" />
+    <Compile Include="Models\Mapping\BackgroundRefMap.cs" />
+    <Compile Include="Models\Mapping\CharacterMap.cs" />
+    <Compile Include="Models\Mapping\ClanRefMap.cs" />
+    <Compile Include="Models\Mapping\DisciplineMap.cs" />
+    <Compile Include="Models\Mapping\DisciplineRefMap.cs" />
+    <Compile Include="Models\Mapping\FlawMap.cs" />
+    <Compile Include="Models\Mapping\FlawRefMap.cs" />
+    <Compile Include="Models\Mapping\MeritMap.cs" />
+    <Compile Include="Models\Mapping\MeritRefMap.cs" />
+    <Compile Include="Models\Mapping\MoralityPathRefMap.cs" />
+    <Compile Include="Models\Mapping\PlayerMap.cs" />
+    <Compile Include="Models\Mapping\SectRefMap.cs" />
+    <Compile Include="Models\Mapping\SkillMap.cs" />
+    <Compile Include="Models\Mapping\SkillRefMap.cs" />
+    <Compile Include="Models\Mapping\StatusMap.cs" />
+    <Compile Include="Models\Mapping\StatusRefMap.cs" />
+    <Compile Include="Models\Merit.cs" />
+    <Compile Include="Models\MeritRef.cs" />
+    <Compile Include="Models\MoralityPathRef.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\SectRef.cs" />
+    <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\SkillRef.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\StatusRef.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sqlite3.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
